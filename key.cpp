@@ -21,7 +21,7 @@ int main() {
     std::fstream fio;
     std::random_device rd;
     std::mt19937 gen(rd());
-    std::uniform_int_distribution<> distr(2,1000);
+    std::uniform_int_distribution<> distr(2,500);
     while(true){
         m = distr(gen);
         if (is_prime(m)){
