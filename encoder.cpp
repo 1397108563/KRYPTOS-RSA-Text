@@ -5,10 +5,17 @@
 using namespace boost::multiprecision;
 
 int main(){
+    std::string text;
+    std::cout<<"输入要加密的文本：";
+    std::cin >> text;
     std::fstream fio;
-    std::string text = "你好";
-    cpp_int key = 53;
-    cpp_int pub = 4559;
+    cpp_int key,pub;
+    fio.open("pub", std::ios::in);
+    fio>>key;
+    fio.close();
+    fio.open("public", std::ios::in);
+    fio>>pub;
+    fio.close();
     const char *utf8 = text.c_str();
     fio.open("RSA-ed.txt", std::ios::out);
     for (int i = 0; i < text.size(); i++) {
@@ -17,10 +24,10 @@ int main(){
         for (int j = 0; j < key; j++) {
             mi = mi*r;
         }
-        std::cout<<mi<<std::endl;
         mi = mi%pub;
         fio<<std::hex<<mi<<"/";
     }
     fio.close();
+    std::cout << "加密文本已写入到 RSA-ed.txt" << std::endl;
     return 0;
 }

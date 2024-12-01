@@ -7,11 +7,16 @@ using namespace boost::multiprecision;
 int z(int r){if(r==0||r==1||r==2||r==3||r==4||r==5||r==6||r==7||r==8||r==9){return r;}else if(49<=r<55){return r-39;}}
 
 int main(){
-    cpp_int key = 2333;
-    cpp_int pub = 4559;
-    int y=0;
     std::fstream fio;
-    std::string s, t;
+    cpp_int key,pub;
+    fio.open("pri", std::ios::in);
+    fio >> key;
+    fio.close();
+    fio.open("public", std::ios::in);
+    fio >> pub;
+    fio.close();
+    int y=0;
+    std::string s,t;
     fio.open("RSA-ed.txt", std::ios::in);
     fio >> s;
     fio.close();
@@ -54,5 +59,6 @@ int main(){
         }
     }
     fio.close();
+    std::cout << "解密后数据已写入到output.txt" << std::endl;
     return 0;
 }
