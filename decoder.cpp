@@ -17,9 +17,8 @@ int main(){
     fio.close();
     int y=0;
     std::string s,t;
-    fio.open("RSA-ed.txt", std::ios::in);
-    fio >> s;
-    fio.close();
+    std::cout << "请输入要解密的数据：" << std::endl;
+    std::cin >> s;
     int j = 0;
     fio.open("output.txt", std::ios::out);
     char c[64];
@@ -59,6 +58,11 @@ int main(){
         }
     }
     fio.close();
+    fio.open("output.txt", std::ios::in);
+    std::string out;
+    fio >> out;
+    fio.close();
+    std::cout << "解密后数据为：" << out << std::endl;
     std::cout << "解密后数据已写入到output.txt" << std::endl;
     return 0;
 }

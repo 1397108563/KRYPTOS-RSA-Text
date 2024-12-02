@@ -28,6 +28,11 @@ int main(){
         fio<<std::hex<<mi<<"/";
     }
     fio.close();
+    fio.open("RSA-ed.txt", std::ios::in);
+    std::string ed;
+    fio>>ed;
+    std::cout<<"加密后的文本为："<<ed<<std::endl;
+    fio.close();
     std::cout << "加密文本已写入到 RSA-ed.txt" << std::endl;
     return 0;
 }
