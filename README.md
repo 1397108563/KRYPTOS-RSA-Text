@@ -1,7 +1,7 @@
 # KRYPTOS-RSA-Text
 基于KRYPTOS &amp; RSA的非对称文本加密传输
 ## 依赖
-`sudo apt install -y libboost-all-dev g++`
+`g++`
 ## 用法 
 `make`  
 `cd build`  

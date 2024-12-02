@@ -1,7 +1,7 @@
 program = g++
 all:
-	$(program) -o build/encoder encoder.cpp
-	$(program) -o build/decoder decoder.cpp
-	$(program) -o build/key key.cpp
+	$(program) -I./include/ -o build/encoder encoder.cpp
+	$(program) -I./include/ -o build/decoder decoder.cpp
+	$(program) -I./include/ -o build/key key.cpp
 clean:
 	rm -rf build
