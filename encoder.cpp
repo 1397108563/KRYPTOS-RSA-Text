@@ -10,12 +10,10 @@ int main(){
     std::cin >> text;
     std::fstream fio;
     cpp_int key,pub;
-    fio.open("pub", std::ios::in);
-    fio>>key;
-    fio.close();
-    fio.open("public", std::ios::in);
-    fio>>pub;
-    fio.close();
+    std::cout<<"输入加密密钥：";
+    std::cin >> key;
+    std::cout<<"输入共有密钥：";
+    std::cin >> pub;
     const char *utf8 = text.c_str();
     fio.open("RSA-ed.txt", std::ios::out);
     for (int i = 0; i < text.size(); i++) {
