@@ -3,7 +3,7 @@
 ## 依赖
 `sudo apt install -y libboost-all-dev g++`
 ## 用法 
-`chmod +x ./make.sh && ./make.sh`  
+`make`  
 `cd build`  
 `./key`  
 然后就可以进行加密解密了  
