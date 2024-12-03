@@ -4,7 +4,7 @@
 #include <boost/multiprecision/cpp_int.hpp>
 using namespace boost::multiprecision;
 
-int z(int r){if(r==0||r==1||r==2||r==3||r==4||r==5||r==6||r==7||r==8||r==9){return r;}else{return r-39;}}
+int z(int r){if(r==0||r==1||r==2||r==3||r==4||r==5||r==6||r==7||r==8||r==9){return r;}else if(r==49||r==50||r==51||r==52||r==53||r==54){return r-39;}}
 
 int main(){
     std::fstream fio;
