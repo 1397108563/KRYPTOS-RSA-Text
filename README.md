@@ -3,12 +3,21 @@
 ## 依赖
 `g++`
 ## 用法 
+### Linux
 `make`  
 `cd build`  
 `./key`  
 然后就可以进行加密解密了  
 加密`./encoder`  
 解密`./decoder`  
+### Windows
+先去  
+`https://sourceforge.net/projects/mingw-w64/files/Toolchains%20targetting%20Win64/Personal%20Builds/mingw-builds/8.1.0/threads-win32/seh/x86_64-8.1.0-release-win32-seh-rt_v6-rev0.7z`  
+下载mingw-w64，将bin目录添加到PATH。  
+然后运行`make.bat`  
+之后可以在`build`目录下找到可执行文件  
+**分享软件需要与DLL一起分享**
+使用过程与Linux相同。  
 ## 文件
 `RSA-ed.txt`是经过RSA加密的内容，其中原始内容的每一个字节以“/”作分割，可以在文件内查找该字符并修改  
 **不可修改为空格，会影响程序的文件读取功能**  
