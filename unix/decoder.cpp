@@ -4,7 +4,7 @@
 #include <boost/multiprecision/cpp_int.hpp>
 using namespace boost::multiprecision;
 
-int z(int r){if(r==0||r==1||r==2||r==3||r==4||r==5||r==6||r==7||r==8||r==9){return r;}else if(r==49||r==50||r==51||r==52||r==53||r==54){return r-39;}}
+int z(int r){if(r==0||r==1||r==2||r==3||r==4||r==5||r==6||r==7||r==8||r==9){return r;}else if(r==49||r==50||r==51||r==52||r==53||r==54){return r-39;}else{return -1;}}
 
 int main(){
     std::fstream fio;
@@ -25,6 +25,11 @@ int main(){
         if(s[i]=='/'){
             for(int k = 0; k < j; k++){
                 int r=z(c[k]-'0');
+                if(r==-1){
+                    std::cout << "解密失败，请检查密文是否正确" << std::endl;
+                    std::cout << "错误：意料之外的字符" << std::endl;
+                    return 0;
+                }
                 cpp_int zr=1;
                 for(int l=0;l<(j-k);l++){
                     zr=zr*16;
