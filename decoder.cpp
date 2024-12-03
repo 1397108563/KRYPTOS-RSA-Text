@@ -9,13 +9,13 @@ int z(int r){if(r==0||r==1||r==2||r==3||r==4||r==5||r==6||r==7||r==8||r==9){retu
 int main(){
     std::fstream fio;
     cpp_int key,pub;
-    std::cout << "请输入解密密钥：" << std::endl;
+    std::cout << "请输入解密密钥：";
     std::cin >> key;
-    std::cout << "请输入共有密钥：" << std::endl;
+    std::cout << "请输入共有密钥：";
     std::cin >> pub;
     int y=0;
     std::string s,t;
-    std::cout << "请输入要解密的数据：" << std::endl;
+    std::cout << "请输入要解密的数据：";
     std::cin >> s;
     int j = 0;
     fio.open("output.txt", std::ios::out);
