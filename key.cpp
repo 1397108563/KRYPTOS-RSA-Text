@@ -58,9 +58,9 @@ int main() {
         }
     }
     std::cout<<"私钥为："<<pri<<std::endl;
-    std::cout<<"共有密钥已写入文件：public"<<pub<<std::endl;
-    std::cout<<"公钥已写入文件：pub"<<pub<<std::endl;
-    std::cout<<"私钥已写入文件：pri"<<pub<<std::endl;
+    std::cout<<"共有密钥已写入文件：public"<<std::endl;
+    std::cout<<"公钥已写入文件：pub"<<std::endl;
+    std::cout<<"私钥已写入文件：pri"<<std::endl;
     fio.open("pri",std::ios::out);
     fio<<pri<<std::endl;
     fio.close();
